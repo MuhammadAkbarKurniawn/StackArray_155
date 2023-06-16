@@ -20,7 +20,7 @@ public:
 		cin >> element;
 
 		if (top == 4) {		//step1.
-			cout << "Number of data exceds the limit " << endl;
+			cout << "Number of data exceeds the limit " << endl;
 			return;
 		}
 
