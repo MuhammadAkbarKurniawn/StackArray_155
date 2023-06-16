@@ -57,16 +57,36 @@ int main() {
 	while (true) {
 		cout << endl;
 		cout << "\n+++Stack Menu+++\n";
-		cout << "1. Push";
-		cout << "2. Pop";
-		cout << "3. Display";
-		cout << "4. Exit";
+		cout << "1. Push" << endl;
+		cout << "2. Pop" << endl;
+		cout << "3. Display" << endl;
+		cout << "4. Exit" << endl;
 		cout << "\nEnter your choice : ";
 		cin >> ch;
 		switch (ch) {
-			Case '1' : {
-				cout <<
+		case '1': {
+			cout << "\nStack is empty" << endl;
+			int element;
+			cin >> element;
+			s.push(element);
+			break;
+		}
+
+		case '2':
+			if (s.empty()) {
+				cout << "\nstack is empty." << endl;
+				break;
 			}
+			s.pop();
+			break;
+		case '3':
+			s.display();
+			break;
+		case '4':
+			return 0;
+		default:
+			cout << "\nInvalid choice" << endl;
+			break;
 		}
 	}
-}
+};
