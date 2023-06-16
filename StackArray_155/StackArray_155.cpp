@@ -14,29 +14,33 @@ public:
 
 	}
 
-	int push(int element) {
-		if (top == 4) {
+	void push() {
+		cout << "\nEnter a element : ";
+		int element;
+		cin >> element;
+
+		if (top == 4) {	//step1.
 			cout << "Number of data exceds the limit " << endl;
+			return;
 		}
 
 		top++;
-		stack_array[top] + element;
+		stack_array[top] = element;	//step3.
 		cout << endl;
 		cout << element << "DItambahkan (Pushed)" << endl;
 
-		return element;
 	}
 	void pop() {
-		if (empty()) {
-			cout << "\nStack is empty. Cannot Pop" << endl;
-			return;
+		if (empty()) {	//step 1
+			cout << "\nStack is empty. Cannot Pop" << endl;	//1.a
+			return;		//1.b
 		}
-		cout << "\nThe Popped element is :" << stack_array[top] << endl;
-		top--;
+		cout << "\nThe Popped element is :" << stack_array[top] << endl;	//step2.
+		top--;	//step 3 decrement
 	}
-	//method for check 
+	//method for check id data is empty
 	bool empty() {
-		return (top = -1);
+		return (top == -1);
 	}
 
 	void display() {
@@ -44,7 +48,7 @@ public:
 			cout << "\nStack is empty." << endl;
 		}
 		else {
-			for (int tmp = top; tmp >= 0; tmp++) {
+			for (int tmp = top; tmp >= 0; tmp--) {
 				cout << stack_array[tmp] << endl;
 			}
 		}
@@ -57,21 +61,17 @@ int main() {
 	while (true) {
 		cout << endl;
 		cout << "\n+++Stack Menu+++\n";
-		cout << "1. Push" << endl;
-		cout << "2. Pop" << endl;
-		cout << "3. Display" << endl;
-		cout << "4. Exit" << endl;
+		cout << "1. Push\n" << endl;
+		cout << "2. Pop\n" << endl;
+		cout << "3. Display\n" << endl;
+		cout << "4. Exit\n" << endl;
 		cout << "\nEnter your choice : ";
 		cin >> ch;
 		switch (ch) {
 		case '1': {
-			cout << "\nStack is empty" << endl;
-			int element;
-			cin >> element;
-			s.push(element);
+			s.push();
 			break;
 		}
-
 		case '2':
 			if (s.empty()) {
 				cout << "\nstack is empty." << endl;
