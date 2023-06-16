@@ -8,7 +8,7 @@ private:
 	int top;
 
 public:
-	//constuctor
+	//Constuctor
 	StackArray() {
 		top = -1;
 
@@ -19,24 +19,24 @@ public:
 		int element;
 		cin >> element;
 
-		if (top == 4) {	//step1.
+		if (top == 4) {		//step1.
 			cout << "Number of data exceds the limit " << endl;
 			return;
 		}
 
 		top++;
-		stack_array[top] = element;	//step3.
+		stack_array[top] = element;		//step3.
 		cout << endl;
 		cout << element << "DItambahkan (Pushed)" << endl;
 
 	}
 	void pop() {
-		if (empty()) {	//step 1
+		if (empty()) {		//step 1
 			cout << "\nStack is empty. Cannot Pop" << endl;	//1.a
-			return;		//1.b
+			return;			//1.b
 		}
-		cout << "\nThe Popped element is :" << stack_array[top] << endl;	//step2.
-		top--;	//step 3 decrement
+		cout << "\nThe Popped element is :" << stack_array[top] << endl;		//step2.
+		top--;		//step 3 decrement
 	}
 	//method for check id data is empty
 	bool empty() {
