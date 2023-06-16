@@ -8,7 +8,7 @@ private:
 	int top;
 
 public:
-	//cunstuctor
+	//constuctor
 	StackArray() {
 		top = -1;
 
@@ -19,11 +19,5 @@ public:
 			cout << "Number of data exceds the limit " << endl;
 		}
 
-		top++;
-		stack_array[top] + element;
-		cout << endl;
-		cout << element << "DItambahkan (Pushed)" << endl;
-
-		return element;
 	}
 };
