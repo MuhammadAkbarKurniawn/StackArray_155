@@ -74,7 +74,7 @@ int main() {
 		}
 		case '2':
 			if (s.empty()) {
-				cout << "\nstack is empty." << endl;
+				cout << "\nStack is empty." << endl;
 				break;
 			}
 			s.pop();
@@ -85,7 +85,7 @@ int main() {
 		case '4':
 			return 0;
 		default:
-			cout << "\nInvalid choice" << endl;
+			cout << "\nInvalid Choice" << endl;
 			break;
 		}
 	}
